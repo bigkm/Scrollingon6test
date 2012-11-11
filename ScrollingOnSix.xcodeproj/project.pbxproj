@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B87B926164E274600CC0E57 /* mainView.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B87B925164E274600CC0E57 /* mainView.png */; };
 		3BAF58A4164E1EDC00A344A9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BAF58A3164E1EDC00A344A9 /* UIKit.framework */; };
 		3BAF58A6164E1EDC00A344A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BAF58A5164E1EDC00A344A9 /* Foundation.framework */; };
 		3BAF58A8164E1EDC00A344A9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BAF58A7164E1EDC00A344A9 /* CoreGraphics.framework */; };
@@ -17,10 +18,11 @@
 		3BAF58B8164E1EDC00A344A9 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BAF58B7164E1EDC00A344A9 /* Default@2x.png */; };
 		3BAF58BA164E1EDC00A344A9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BAF58B9164E1EDC00A344A9 /* Default-568h@2x.png */; };
 		3BAF58BD164E1EDC00A344A9 /* KMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF58BC164E1EDC00A344A9 /* KMViewController.m */; };
-		3BAF58C0164E1EDC00A344A9 /* KMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BAF58BE164E1EDC00A344A9 /* KMViewController.xib */; };
+		3BAF58C7164E201B00A344A9 /* firstBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BAF58C6164E201B00A344A9 /* firstBackground.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B87B925164E274600CC0E57 /* mainView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainView.png; sourceTree = "<group>"; };
 		3BAF589F164E1EDC00A344A9 /* ScrollingOnSix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollingOnSix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BAF58A3164E1EDC00A344A9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3BAF58A5164E1EDC00A344A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -36,7 +38,7 @@
 		3BAF58B9164E1EDC00A344A9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		3BAF58BB164E1EDC00A344A9 /* KMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMViewController.h; sourceTree = "<group>"; };
 		3BAF58BC164E1EDC00A344A9 /* KMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMViewController.m; sourceTree = "<group>"; };
-		3BAF58BF164E1EDC00A344A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/KMViewController.xib; sourceTree = "<group>"; };
+		3BAF58C6164E201B00A344A9 /* firstBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = firstBackground.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +89,8 @@
 				3BAF58B3164E1EDC00A344A9 /* KMAppDelegate.m */,
 				3BAF58BB164E1EDC00A344A9 /* KMViewController.h */,
 				3BAF58BC164E1EDC00A344A9 /* KMViewController.m */,
-				3BAF58BE164E1EDC00A344A9 /* KMViewController.xib */,
+				3BAF58C6164E201B00A344A9 /* firstBackground.png */,
+				3B87B925164E274600CC0E57 /* mainView.png */,
 				3BAF58AA164E1EDC00A344A9 /* Supporting Files */,
 			);
 			path = ScrollingOnSix;
@@ -163,7 +166,8 @@
 				3BAF58B6164E1EDC00A344A9 /* Default.png in Resources */,
 				3BAF58B8164E1EDC00A344A9 /* Default@2x.png in Resources */,
 				3BAF58BA164E1EDC00A344A9 /* Default-568h@2x.png in Resources */,
-				3BAF58C0164E1EDC00A344A9 /* KMViewController.xib in Resources */,
+				3BAF58C7164E201B00A344A9 /* firstBackground.png in Resources */,
+				3B87B926164E274600CC0E57 /* mainView.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,14 +195,6 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		3BAF58BE164E1EDC00A344A9 /* KMViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3BAF58BF164E1EDC00A344A9 /* en */,
-			);
-			name = KMViewController.xib;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -224,7 +220,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -244,7 +240,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -292,6 +288,7 @@
 				3BAF58C5164E1EDC00A344A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
