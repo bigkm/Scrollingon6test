@@ -14,32 +14,42 @@
 
 @implementation KMViewController
 
-- (UIScrollView *)scrollViewWithBackground:(UIColor *)color andContentSize:(CGSize)contentSize
-{
-    
-
-    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectZero];
-    scrollView.backgroundColor = color;
-    scrollView.contentSize = contentSize;
-    scrollView.showsVerticalScrollIndicator = YES;
-    
-    UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0.0, contentSize.height - 20.0, contentSize.width, 20.0)];
-    footerView.backgroundColor = [UIColor grayColor];
-    [scrollView addSubview:footerView];
-    
-    return scrollView;
-}
-
 - (void)loadView
 {
-    UIScrollView *mainScrollView = [self scrollViewWithBackground:[UIColor underPageBackgroundColor] andContentSize:CGSizeMake(320.0f, 1200.0f)];
+	UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 768.0, 1024.0)];
+	[containerView setBackgroundColor:[UIColor lightGrayColor]];
+	
+	UIScrollView *leftScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(10.0f, 10.0f, 364.0f, 1004.0f)];
+	[leftScrollView setBackgroundColor:[UIColor scrollViewTexturedBackgroundColor]];
+	[leftScrollView setShowsVerticalScrollIndicator:YES];
+	[leftScrollView setBounces:YES];
+	[leftScrollView setContentSize:CGSizeMake(364.0f, 1512.0f)];
+	[containerView addSubview:leftScrollView];
 
-    UIScrollView *first = [self scrollViewWithBackground:[UIColor viewFlipsideBackgroundColor] andContentSize:CGSizeMake(240.0, 600.0)];
-    first.frame = CGRectMake(0.0, 4.0, 240.0, 400.0);
-    first.indicatorStyle = UIScrollViewIndicatorStyleWhite;
-    [mainScrollView addSubview:first];
-    
-    self.view = mainScrollView;
+	UIScrollView *leftSubScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(10.0f, 236.0f, 344.0f, 472.0f)];
+	[leftSubScrollView setBackgroundColor:[[UIColor purpleColor] colorWithAlphaComponent:0.6]];
+	[leftSubScrollView setShowsVerticalScrollIndicator:YES];
+	[leftSubScrollView setBounces:YES];
+	[leftSubScrollView setIndicatorStyle:UIScrollViewIndicatorStyleWhite];
+	[leftSubScrollView setContentSize:CGSizeMake(344.0f, 1024.0f)];
+	[leftScrollView addSubview:leftSubScrollView];
+
+	UIScrollView *rightScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(394.0f, 10.0f, 364.0f, 1004.0f)];
+	[rightScrollView setBackgroundColor:[UIColor scrollViewTexturedBackgroundColor]];
+	[rightScrollView setShowsVerticalScrollIndicator:YES];
+	[rightScrollView setBounces:YES];
+	[rightScrollView setContentSize:CGSizeMake(364.0f, 1512.0f)];
+	[containerView addSubview:rightScrollView];
+	
+	UIScrollView *rightSubScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(10.0f, 236.0f, 344.0f, 472.0f)];
+	[rightSubScrollView setBackgroundColor:[[UIColor orangeColor] colorWithAlphaComponent:0.6]];
+	[rightSubScrollView setShowsVerticalScrollIndicator:YES];
+	[rightSubScrollView setBounces:NO];
+	[rightSubScrollView setIndicatorStyle:UIScrollViewIndicatorStyleWhite];
+	[rightSubScrollView setContentSize:CGSizeMake(344.0f, 1024.0f)];
+	[rightScrollView addSubview:rightSubScrollView];
+	
+    [self setView:containerView];
 }
 
 - (void)viewDidLoad
